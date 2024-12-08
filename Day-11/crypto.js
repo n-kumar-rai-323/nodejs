@@ -1,6 +1,6 @@
+// crypto.randomBytes(size)
 const crypto = require("crypto")
 
-const genRandom=(digit)=>{
-    return crypto.randomInt(100000,999999);
-}
-console.log(genRandom(5))
+const randomValue = crypto.randomBytes(6).toString();
+
+console.log(randomValue)
