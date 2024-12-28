@@ -11,7 +11,7 @@ fs.writeFile("./nisha.txt", "hello nishan",(err)=>{
 const  result = fs.readFileSync("./contact.txt", "utf-8");
 console.log(result)
 
-// Async 
+// Async  (Non -blocking operation)
 fs.readFile("./contact.txt", "utf-8",(err, result)=>{
     if(err){
         console.log(" Error ocure", err)
@@ -20,7 +20,7 @@ fs.readFile("./contact.txt", "utf-8",(err, result)=>{
     }
 })
 
-
+// blocking operation 
 fs.appendFileSync("./contact.txt","you are from sindhuli")
 
 fs.cpSync("./contact.txt","./copy.txt")
