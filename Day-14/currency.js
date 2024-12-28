@@ -1,5 +1,5 @@
 const CC = require('currency-converter-lt')
-
+const http = require('http')
 
 const converter =(amount, from, to)=>{
     const currencyConvertor=new CC();
@@ -10,3 +10,10 @@ const converter =(amount, from, to)=>{
 }
 
 converter("1", "USD","NPR")
+
+http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      data: 'Hello World!',
+    }));
+  });
